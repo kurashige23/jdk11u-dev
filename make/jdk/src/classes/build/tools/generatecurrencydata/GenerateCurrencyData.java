@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001, 2023, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2001, 2020, Oracle and/or its affiliates. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  *
  * This code is free software; you can redistribute it and/or modify it
@@ -296,7 +296,7 @@ public class GenerateCurrencyData {
             specialCaseNewCurrenciesDefaultFractionDigits[specialCaseCount] = getDefaultFractionDigits(newCurrency);
             specialCaseNewCurrenciesNumericCode[specialCaseCount] = getNumericCode(newCurrency);
         }
-        specialCaseMap.put(currencyInfo, new Integer(specialCaseCount));
+        specialCaseMap.put(currencyInfo, Integer.valueOf(specialCaseCount));
         return specialCaseCount++;
     }
 

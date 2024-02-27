@@ -67,7 +67,7 @@ class TzdbZoneRulesProvider {
     }
 
     public Set<String> getZoneIds() {
-        return new TreeSet(regionIds);
+        return new TreeSet<String>(regionIds);
     }
 
     public Map<String, String> getAliasMap() {
@@ -100,6 +100,7 @@ class TzdbZoneRulesProvider {
             return (ZoneRules)obj;
         }
         try {
+            @SuppressWarnings("unchecked")
             ZoneRules zrules = buildRules(zoneId, (List<ZoneLine>)obj);
             zones.put(zoneId, zrules);
             return zrules;
